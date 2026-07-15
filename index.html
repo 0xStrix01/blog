@@ -172,7 +172,7 @@ function toggleSub(el) {
 <!-- Sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="brand">
-    <div class="logo">N</div>
+    <div class="logo">S</div>
     <div>
       <h1>Strix’s site</h1>
       <p>Journey notes</p>
@@ -185,22 +185,18 @@ function toggleSub(el) {
   </div>
 
   <nav class="nav" id="nav">
-    <a href="#" class="active" data-filter="all"><span class="dot"></span> Home</a>
-    <a href="#" data-filter="credentials" onclick="toggleSub(this)"><span class="dot"></span> Credentials</a>
-    <a href="#" data-filter="Windows credentials" class="subelement"><span class="dot"></span> Windows</a>
-    <a href="#" data-filter="Linux credentials" class="subelement"><span class="dot"></span> Linux</a>
-    <a href="#" data-filter="enumeration"><span class="dot"></span> Enumeration</a>
-    <a href="#" data-filter="exploitation"><span class="dot"></span> Exploitation</a>
-    <a href="#" data-filter="privilege"><span class="dot"></span> Privilege Escalation</a>
-    <a href="#" data-filter="tools"><span class="dot"></span> Tools</a>
-    <a href="#" data-filter="writeups"><span class="dot"></span> Writeups</a>
-    <a href="#" data-filter="about"><span class="dot"></span> About</a>
+    <a href="https://0xstrix01.github.io/blog/" class="active" data-filter="all"><span class="dot"></span> Home</a>
+    <a href="https://0xstrix01.github.io/blog/credentials/" data-filter="credentials" onclick="toggleSub(this)"><span class="dot"></span> Credentials</a>
+    <a href="https://0xstrix01.github.io/blog/credentials/windows/" data-filter="Windows credentials" class="subelement"><span class="dot"></span> Windows</a>
+    <a href="https://0xstrix01.github.io/blog/linux/" data-filter="Linux credentials" class="subelement"><span class="dot"></span> Linux</a>
+    <a href="https://0xstrix01.github.io/blog/" data-filter="writeups"><span class="dot"></span> Writeups</a>
+    <a href="https://0xstrix01.github.io/blog/" data-filter="about"><span class="dot"></span> About</a>
   </nav>
 
   <div class="spacer"></div>
 
   <div class="profile">
-    <div class="avatar">N</div>
+    <div class="avatar">S</div>
     <div>
       <div style="font-weight:700">Strix</div>
       <small>Offensive Security • Notes</small>
@@ -218,79 +214,19 @@ function toggleSub(el) {
       </button>
       <h2>Latest Posts</h2>
     </div>
-<!--
-    <div class="filters" aria-hidden>
-      <div class="chip active" data-chip="all">All</div>
-      <div class="chip" data-chip="credentials">Credentials</div>
-      <div class="chip" data-chip="enumeration">Enumeration</div>
-      <div class="chip" data-chip="exploitation">Exploitation</div>
-    </div>
--->
+
   </div>
 
   <div class="grid" id="posts">
 
-    <!--<article class="card" data-tags="enumeration,nmap,recon">
-      <h3>Mapping the Target with Nmap</h3>
-      <div class="meta">July 2026 • Tags: enumeration, recon</div>
-      <p>Start with service discovery and version detection. Use targeted scripts to reveal attack surface and prioritize services.</p>
-      <div style="margin-top:12px" class="tags">
-        <span class="tag">enumeration</span>
-        <span class="tag">nmap</span>
-        <span class="tag">recon</span>
-      </div>
-    </article> -->
-
     <article class="card" data-tags="credentials,hashes,bruteforce,Windows credentials">
       <h3>Steal SAM database hashes and other local hashes</h3>
-      <div class="meta">2026 July 07</div>
-      <p>The SAM database stores several hashes which are retrivable with the privileges. There are numerous techniques which can be used to get these hashes. </p>
-      <div style="margin-top:12px" class="tags">
-        <span class="tag">credentials</span>
-        <span class="tag">hashes</span>
-        <span class="tag">Windows</span>
-      </div>
+      <p>The SAM database stores several hashes which are retrivable with the correct privileges.</p>
     </article>
-
-    <!-- <article class="card" data-tags="exploitation,smb,writeup">
-      <h3>SMB Exploitation Writeup</h3>
-      <div class="meta">May 2026 • Tags: exploitation, writeups</div>
-      <p>Walkthrough of an SMB misconfiguration leading to remote code execution and post exploitation cleanup notes.</p>
-      <div style="margin-top:12px" class="tags">
-        <span class="tag">exploitation</span>
-        <span class="tag">SMB</span>
-        <span class="tag">writeup</span>
-      </div>
-    </article>
-
-    <article class="card" data-tags="privilege,linux,suid">
-      <h3>Privilege Escalation Patterns</h3>
-      <div class="meta">April 2026 • Tags: privilege escalation</div>
-      <p>Common Linux and Windows escalation vectors, SUID binaries, weak services, and automated enumeration tips.</p>
-      <div style="margin-top:12px" class="tags">
-        <span class="tag">privilege</span>
-        <span class="tag">suid</span>
-      </div>
-    </article> -->
 
   </div>
 
   <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:28px 0">
-
-  <!-- <section>
-    <h3 style="color:var(--accent)">Quick Post Template</h3>
-    <pre><code>// Title
-Summary line
-Date • Tags: tag1, tag2
-
-Intro paragraph
-Steps
-- Step 1
-- Step 2
-
-Conclusion and remediation notes
-</code></pre>
-  </section> -->
 
 </div>
 
