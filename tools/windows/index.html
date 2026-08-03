@@ -184,15 +184,6 @@ function toggleSub(el) {
   </div>
 
   <nav class="nav" id="nav">
-    <a href="https://0xstrix01.github.io/blog/" class="active" ><span class="dot"></span> Home</a>
-    <a href="#" onclick="toggleSub('credentials')"><span class="dot"></span> Credentials</a>
-    <a href="https://0xstrix01.github.io/blog/credentials/windows/index.html" id="credentials_subelement" class="subelement"><span class="dot"></span> Windows</a>
-    <a href="https://0xstrix01.github.io/blog/credentials/linux/" id="credentials_subelement" class="subelement"><span class="dot"></span> Linux</a>
-    <a href="#" onclick="toggleSub('tools')"><span class="dot"></span> Tools</a>
-    <a href="https://0xstrix01.github.io/blog/credentials/windows/windows_tools.html" id="tools_subelement" class="subelement"><span class="dot"></span> Windows</a>
-    <a href="https://0xstrix01.github.io/blog/credentials/linux/" id="tools_subelement" class="subelement"><span class="dot"></span> Linux</a>
-    <a href="https://0xstrix01.github.io/blog/"><span class="dot"></span> Writeups</a>
-    <a href="https://0xstrix01.github.io/blog/"><span class="dot"></span> About</a>
   </nav>
 
   <div class="spacer"></div>
@@ -231,6 +222,14 @@ function toggleSub(el) {
 </div>
 
 <script>
+	// Load the navbar
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', 'https://0xstrix01.github.io/blog/navbar.html', false);
+	xhr.send();
+	if (xhr.status == 200) {
+		document.getElementById('nav').innerHTML = xhr.responseText;
+	}
+
   // Sidebar toggle for mobile
   const sidebar = document.getElementById('sidebar');
   const toggle = document.getElementById('toggleBtn');

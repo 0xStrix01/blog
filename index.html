@@ -164,16 +164,6 @@ function toggleSub(el) {
     s.style.display = s.style.display === "flex" ? "none" : "flex";
   });
   }
-  
-  
-var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function() {
-if (xhr.readyState == 4 && xhr.status == 200) {
-	document.getElementById('navbar').innerHTML = xhr.responseText;
-        }
-}
-xhr.open('GET', 'https://0xstrix01.github.io/blog/navbar.html');
-xhr.send()
 </script>
 </head>
 <body>
@@ -244,10 +234,20 @@ xhr.send()
 </div>
 
 <script>
-  // Sidebar toggle for mobile
-  const sidebar = document.getElementById('sidebar');
-  const toggle = document.getElementById('toggleBtn');
-  toggle.addEventListener('click', ()=> sidebar.classList.toggle('open'));
+    
+    // Load the navbar
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', 'https://0xstrix01.github.io/blog/navbar.html', false);
+	xhr.send();
+	if (xhr.status == 200) {
+		document.getElementById('nav').innerHTML = xhr.responseText;
+	}
+
+
+	// Sidebar toggle for mobile
+	const sidebar = document.getElementById('sidebar');
+	const toggle = document.getElementById('toggleBtn');
+	toggle.addEventListener('click', ()=> sidebar.classList.toggle('open'));
 </script>
 </body>
 </html>
